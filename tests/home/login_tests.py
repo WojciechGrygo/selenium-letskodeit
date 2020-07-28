@@ -18,18 +18,15 @@ class LoginTests():
         ln = LoginPage(driver)
         ln.login("test@email.com", "abcabc")
 
+        user_icon = driver.find_element(By.XPATH, "//img[@class='gravatar']")
 
-        userIcon = driver.find_element(By.XPATH, "//img[@class='gravatar']")
-
-        if userIcon is not None:
+        if user_icon is not None:
             print("Login Successful")
         else:
             print("Login Failed")
 
         driver.quit()
 
+
 lt = LoginTests()
 lt.test_valid_login()
-
-
-
