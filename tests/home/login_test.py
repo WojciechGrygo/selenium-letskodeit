@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from pages.home.login_page import LoginPage
+import unittest
 
 
-class LoginTests():
+class LoginTests(unittest.TestCase):
 
     def test_valid_login(self):
         baseUrl = "https://letskodeit.teachable.com/"
@@ -28,5 +29,5 @@ class LoginTests():
         driver.quit()
 
 
-lt = LoginTests()
-lt.test_valid_login()
+# lt = LoginTests()
+# lt.test_valid_login()
